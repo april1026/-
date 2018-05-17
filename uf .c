@@ -60,7 +60,7 @@ int main (int argc, char *argv[]) {
 			i --;
 		}
 	}
-		printf ("n\n\ ... 堆疊已空");
+		printf ("\n\n ... 堆疊已空");
 	
 	return 0;
 }
