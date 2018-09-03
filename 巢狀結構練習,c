@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct date {
+	int year;
+	int month;
+	int day;
+};
+
+struct ename {
+	char last[10];
+	char first[10];
+};
+struct person {
+	char id[11];
+	char cname[10];
+	struct date birth;
+	char blood[3];
+	char married;
+	struct ename name;
+};
+
+int main(int argc, char *argv[]) {
+	struct person p1 = {"B123456789", "張三", {1980, 10, 25}, "A", 'Y', {"Lin", "David"}};
+	printf("身分證字號:%s \n", p1.id);
+	printf("中文名字:%s \n", p1.cname);
+	printf("出生年份:%d 年\n", p1.birth.year - 1911);
+	printf("出生月份:%d 月\n", p1.birth.month);
+	printf("出生日期:%d 日\n", p1.birth.day);
+	printf("血    型:%s 型\n", p1.blood);
+	printf("結    婚:%c \n", p1.married);
+	printf("英文姓名:%s %s\n", p1.name.first, p1.name.last);
+	printf("\n");
+	
+	return 0;
+}
