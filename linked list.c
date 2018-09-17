@@ -2,22 +2,18 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
-
+void newnode(struct node*, struct node*);
+struct node {
+	char name[10];
+	int age;
+	struct node *next;
+};
 int main(int argc, char *argv[]) {
-	struct node {
-		char name[10];
-		int age;
-		struct node *next;
-	};
-	
+	char namelist[10] = {"David\0"};
 	struct node *head, *ptr, *newptr;
 	int i;
 	
-	newptr = (struct node*) malloc (sizeof(struct node));
-	strcpy(newptr -> name, "David");
-	newptr -> age = 20;
-	newptr -> next = NULL;
-	ptr = newptr;
+	newnode(ptr, newptr);
 	head = ptr;
 	
 	newptr = (struct node*) malloc (sizeof(struct node));
@@ -41,3 +37,11 @@ int main(int argc, char *argv[]) {
 		ptr = ptr -> next;
 	}
 } 
+
+void newnode(struct node*, struct node*) {
+	newptr = (struct node*) malloc (sizeof(struct node));
+	strcpy(newptr -> name, "David");
+	newptr -> age = 20;
+	newptr -> next = NULL;
+	ptr = newptr;
+}
