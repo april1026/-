@@ -18,6 +18,10 @@ int main() {
 	fno = fileno(fptr);
 	fsize = filelength(fno);
 	printf("\n %s 開檔完成，檔案大小 %d Bytes\n", fpath, fsize);
+	char ch;
+	while((ch = fgetc(fptr)) != EOF) {
+		printf("%c", ch);
+	}
 	fclose(fptr);
 	return 0;
 } 
