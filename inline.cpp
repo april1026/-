@@ -19,7 +19,7 @@ int main () {
 	char c1, c2;
 	cout << "請輸入兩個字元:";
 	cin >> c1 >> c2;
-	cout << n1 << " 與 " << c2 << " 中最小字元為 " << getmin(c1, c2) << endl << endl;
+	cout << 1 << " 與 " << c2 << " 中最小字元為 " << getmin(c1, c2) << endl << endl;
 	return 0;
 }
 inline double getmin (double x, double y) {
